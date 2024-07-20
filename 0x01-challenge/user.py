@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """A module for User class"""
 
+
 class User():
     """User class"""
 
