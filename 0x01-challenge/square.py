@@ -3,29 +3,51 @@
 
 
 class Square():
-    """A class that creates a square"""
+    """
+    A class that creates a square
 
-    width = 0
-    height = 0
+    Attributes:
+        width: The wigth of the square
+        height: The height of the square
+    """
 
-    def __init__(self, *args, **kwargs):
-        """Initialize attributes"""
+    def __init__(self, width=0, height=0):
+        """
+        Initialize attributes
 
-        for key, value in kwargs.items():
-            setattr(self, key, value)
+        Args:
+            width: The wigth of the square
+            height: The height of the square
+        """
+
+        self.width = width
+        self.height = height
 
     def area_of_my_square(self):
-        """ Area of the square """
+        """
+        Area of the square
+
+        Return:
+            The area of the square
+        """
 
         return self.width * self.height
 
     def PermiterOfMySquare(self):
-        """Compute the perimeter of the square"""
+        """
+        Compute the perimeter of the square
+
+        Return: The perimeter of the square
+        """
 
         return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
-        """Formating the square printing"""
+        """
+        Formating the square printing
+
+        Return: A string to be printed
+        """
 
         return "{}/{}".format(self.width, self.height)
 
