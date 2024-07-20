@@ -20,8 +20,34 @@ class Square():
             height: The height of the square
         """
 
-        self.width = width
-        self.height = height
+        self.__width = width
+        self.__height = height
+
+    @property
+    def width(self):
+        """A getter to the private attribute width"""
+
+        return self.__width
+
+    @width.setter
+    def width(self, width):
+        if width < 0:
+            self.__width = 0
+        else:
+            self.__width = width
+
+    @property
+    def height(self):
+        """A getter to the private attribute height"""
+
+        return self.__height
+
+    @height.setter
+    def height(self, height):
+        if height < 0:
+            self.__height = 0
+        else:
+            self.__height = height
 
     def area_of_my_square(self):
         """
@@ -31,7 +57,7 @@ class Square():
             The area of the square
         """
 
-        return self.width * self.height
+        return self.__width * self.__height
 
     def PermiterOfMySquare(self):
         """
@@ -40,7 +66,7 @@ class Square():
         Return: The perimeter of the square
         """
 
-        return (self.width * 2) + (self.height * 2)
+        return (self.__width * 2) + (self.__height * 2)
 
     def __str__(self):
         """
@@ -49,7 +75,7 @@ class Square():
         Return: A string to be printed
         """
 
-        return "{}/{}".format(self.width, self.height)
+        return "{}/{}".format(self.__width, self.__height)
 
 
 if __name__ == "__main__":
